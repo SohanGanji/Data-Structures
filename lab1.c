@@ -11,7 +11,7 @@ int main()
         printf("%d ",a[i]);   
     }
     printf("\n");
-    //inserting element
+
     int n,j;
     printf("enter the inserting number n:\n");
     scanf("%d",&n);
