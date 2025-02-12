@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-// Swap function
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
@@ -44,7 +42,7 @@ void insertionSort(int arr[], int n) {
     }
 }
 
-// Merge Sort Helper Function
+// Merge Sort
 void merge(int arr[], int left, int mid, int right) {
     int n1 = mid - left + 1, n2 = right - mid;
     int L[n1], R[n2];
@@ -58,7 +56,6 @@ void merge(int arr[], int left, int mid, int right) {
     while (j < n2) arr[k++] = R[j++];
 }
 
-// Merge Sort
 void mergeSort(int arr[], int left, int right) {
     if (left < right) {
         int mid = left + (right - left) / 2;
@@ -68,7 +65,7 @@ void mergeSort(int arr[], int left, int right) {
     }
 }
 
-// Quick Sort Partition Function
+// Quick Sort
 int partition(int arr[], int low, int high) {
     int pivot = arr[high], i = low - 1;
     for (int j = low; j < high; j++) {
@@ -78,7 +75,6 @@ int partition(int arr[], int low, int high) {
     return i + 1;
 }
 
-// Quick Sort
 void quickSort(int arr[], int low, int high) {
     if (low < high) {
         int pi = partition(arr, low, high);
@@ -86,6 +82,7 @@ void quickSort(int arr[], int low, int high) {
         quickSort(arr, pi + 1, high);
     }
 }
+
 
 // Function to print an array
 void printArray(int arr[], int n) {
